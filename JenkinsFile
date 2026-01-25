@@ -1,6 +1,13 @@
 pipeline{
   agent any
   stage {
+
+    stage('Webhook Test') {
+      steps {
+        echo "GitHub webhook triggered successfully!"
+      }
+    }
+
     stage('Clone Repo') {
     steps {
       git branch: 'main',
