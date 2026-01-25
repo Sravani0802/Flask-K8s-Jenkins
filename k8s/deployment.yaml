@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: flask-cal
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: flask-cal
+  template:
+    metadata:
+      labels:
+        app: flask-cal
+    spec:
+      containers:
+      - name: flask-cal
+        image: flask-calculator:latest
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 5000
+
+
+
