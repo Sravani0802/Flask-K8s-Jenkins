@@ -4,7 +4,7 @@ pipeline{
 
     stage('Webhook Test') {
       steps {
-        echo "GitHub webhook triggered successfully!"
+        echo "GitHub webhook triggered successfully Now!"
       }
     }
 
