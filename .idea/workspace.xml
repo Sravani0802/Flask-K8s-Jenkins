@@ -46,8 +46,8 @@
       <file leaf-file-name="JenkinsFile" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/JenkinsFile">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="441">
-              <caret line="27" column="12" lean-forward="false" selection-start-line="27" selection-start-column="12" selection-end-line="27" selection-end-column="12" />
+            <state relative-caret-position="-34">
+              <caret line="27" column="101" lean-forward="true" selection-start-line="27" selection-start-column="101" selection-end-line="27" selection-end-column="101" />
               <folding />
             </state>
           </provider>
@@ -99,8 +99,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="1043" />
-    <option name="y" value="40" />
+    <option name="x" value="793" />
+    <option name="y" value="48" />
     <option name="width" value="976" />
     <option name="height" value="931" />
   </component>
@@ -617,8 +617,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/JenkinsFile">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="441">
-          <caret line="27" column="12" lean-forward="false" selection-start-line="27" selection-start-column="12" selection-end-line="27" selection-end-column="12" />
+        <state relative-caret-position="-34">
+          <caret line="27" column="101" lean-forward="true" selection-start-line="27" selection-start-column="101" selection-end-line="27" selection-end-column="101" />
           <folding />
         </state>
       </provider>
