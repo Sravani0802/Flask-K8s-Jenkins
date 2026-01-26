@@ -10,7 +10,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git branch: 'main', url: 'https://github.com/Sravani0802/Flask-AWS-ECR-EKS.git'
+                git branch: 'main', url: 'https://github.com/Sravani0802/Flask-K8s-Jenkins.git'
             }
         }
 
