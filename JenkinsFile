@@ -37,7 +37,7 @@ pipeline {
         stage('Push to ECR') {
             steps {
               script {
-                sh "docker push ${ECR_REPO}:${IMAGE_TAG}"
+                bat "docker push ${ECR_REPO}:${IMAGE_TAG}"
               }
             }
         }
@@ -46,14 +46,14 @@ pipeline {
             steps {
               script {
               // Configure kubeconfig
-                sh "aws eks update-kubeconfig --region ${AWS_REGION} --name flask-ecr"
+                bat "aws eks update-kubeconfig --region ${AWS_REGION} --name flask-ecr"
 
               // Replace image in deployment.yaml dynamically
-                sh "sed -i 's|image:.*|image: ${ECR_REPO}:${IMAGE_TAG}|' k8s/deployment.yaml"
+                bat "sed -i 's|image:.*|image: ${ECR_REPO}:${IMAGE_TAG}|' k8s//deployment.yaml"
 
               // Apply Kubernetes manifests
-                sh "kubectl apply -f k8s/deployment.yaml"
-                sh "kubectl apply -f k8s/service.yaml"
+                bat "kubectl apply -f k8s/deployment.yaml"
+                bat "kubectl apply -f k8s/service.yaml"
               }
             }
         }
