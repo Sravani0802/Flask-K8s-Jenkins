@@ -44,7 +44,7 @@ pipeline {
 
         stage('Deploy to EKS') {
           steps {
-            withCredentials([[$class: 'AmazonWebServicesCredentialsBinding', credentialsId: 'aws-creds']]) {
+            withCredentials([[$class: 'AmazonWebServicesCredentialsBinding', credentialsId: 'aws-cred']]) {
             bat """
             aws eks update-kubeconfig --region ap-south-1 --name flask-ecr
             kubectl apply -f k8s/deployment.yaml
