@@ -43,19 +43,16 @@ pipeline {
         }
 
         stage('Deploy to EKS') {
-            steps {
-              script {
-              // Configure kubeconfig
-                bat "aws eks update-kubeconfig --region ${AWS_REGION} --name flask-ecr"
-
-              // Replace image in deployment.yaml dynamically
-                bat "sed -i 's|image:.*|image: ${ECR_REPO}:${IMAGE_TAG}|' k8s//deployment.yaml"
-
-              // Apply Kubernetes manifests
-                bat "kubectl apply -f k8s/deployment.yaml"
-                bat "kubectl apply -f k8s/service.yaml"
-              }
-            }
+          steps {
+            withCredentials([[$class: 'AmazonWebServicesCredentialsBinding', credentialsId: 'aws-creds']]) {
+            bat """
+            aws eks update-kubeconfig --region ap-south-1 --name flask-ecr
+            kubectl apply -f k8s/deployment.yaml
+            kubectl apply -f k8s/service.yaml
+            """
         }
+    }
+}
+
     }
 }
