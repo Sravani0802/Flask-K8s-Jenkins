@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: flask-cal
-        image: flask-calculator:latest
+        image: <ECR_IMAGE_PLACEHOLDER>
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 5000
