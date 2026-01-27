@@ -48,11 +48,15 @@ pipeline {
             bat """
             aws eks update-kubeconfig --region ap-south-1 --name flask-eks
             kubectl apply -f k8s/deployment.yaml
+            kubectl set image deployment/flask-cal flask-cal=${ECR_REPO}:${IMAGE_TAG}
+            kubectl rollout status deployment/flask-cal
             kubectl apply -f k8s/service.yaml
             """
+            }
+          }
         }
-    }
-}
+
+
 
     }
 }

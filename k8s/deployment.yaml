@@ -14,8 +14,7 @@ spec:
     spec:
       containers:
       - name: flask-cal
-        image: <ECR_IMAGE_PLACEHOLDER>
-        imagePullPolicy: IfNotPresent
+        image: 138383657739.dkr.ecr.ap-south-1.amazonaws.com/flask-cal:latest
         ports:
         - containerPort: 5000
 
