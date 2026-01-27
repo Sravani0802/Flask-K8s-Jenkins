@@ -34,7 +34,7 @@ pipeline {
 }
 
 
-        stage('Push to ECR') {
+        stage('Push to AWS ECR') {
             steps {
               script {
                 bat "docker push ${ECR_REPO}:${IMAGE_TAG}"
@@ -42,7 +42,7 @@ pipeline {
             }
         }
 
-        stage('Deploy to EKS') {
+        stage('Deploy to AWS EKS') {
           steps {
             withCredentials([[$class: 'AmazonWebServicesCredentialsBinding', credentialsId: 'aws-cred']]) {
             bat """
