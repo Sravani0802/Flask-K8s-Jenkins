@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7cbae3e9-9bf3-4f89-a31d-cf26df74c820" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/JenkinsFile" afterPath="$PROJECT_DIR$/JenkinsFile" />
-      <change beforePath="$PROJECT_DIR$/k8s/deployment.yaml" afterPath="$PROJECT_DIR$/k8s/deployment.yaml" />
-    </list>
+    <list default="true" id="7cbae3e9-9bf3-4f89-a31d-cf26df74c820" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -99,7 +96,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="793" />
     <option name="y" value="48" />
     <option name="width" value="976" />
@@ -204,8 +201,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1938" height="1038" extended-state="7" />
-    <editor active="true" />
+    <frame x="-9" y="-9" width="1938" height="1038" extended-state="6" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.02908514" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
