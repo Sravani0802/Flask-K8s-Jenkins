@@ -1,42 +1,96 @@
-Flask CI/CD with Jenkins, Docker, AWS ECR & EKS
-Project Overview
-This Project demonstrates a complete CI/CD pipeline for a Flask application using GitHub, Jenkins, Docker, AWS ECR, and AWS EKS. The Pipeline automes Building, Containerizing, and deploying the application to a Kuberneters cluster on AWS.
+##### **CI/CD Pipeline on AWS using Jenkins, ECR \& EKS (Flask Application)**
 
-Architecture
 
-GitHub  -->  Jenkins --> Docker --> AWS ECR --> AWS EKS --> Flask App
 
-GitHub: Stores the Application code and Jenkinsfile for CI/CD.
-Jenkins: Watches for GitHub commits and triggers pipeline builds.
-Docker: Builds the application image from the Dockerfile.
-AWS ECR: Stores Docker images.
-AWS EKS: Deploys Docker containers on Kubernetes using YAML manifests.
+###### **Project Overview**
 
-Deployment Steps
 
-Push code to GitHub repository.
-Jenkins detects the GitHub webhook event and triggers the pipeline.
-Jenkins builds the Docker image and pushes it to AWS ECR.
-Jenkins applies Kubernetes manifests to deploy the application on Amazon EKS.
-Access the Flask application via the service URL provided by EKS.
 
-Folder Structure
-.
-├── Calculator.py
-├── requirements.txt
-├── Dockerfile
-├── Jenkinsfile
-├── k8s/
-│   ├── deployment.yaml
-│   └── service.yaml
-└── Screenshoots/                # Screenshots for project validation
+This project demonstrates a \*\*cloud-native CI/CD pipeline\*\* by deploying a containerized Flask application on \*\*AWS Elastic Kubernetes Service (EKS)\*\* using:
 
-Proof & Validation
 
-Screenshots showing:
 
-Jenkins build success
+* &#x20;\*\*Jenkins\*\* for CI/CD automation  
+* &#x20;\*\*Docker\*\* for containerization  
+* &#x20;\*\*Amazon ECR\*\* for container image storage  
+* &#x20;\*\*Amazon EKS (Kubernetes)\*\* for orchestration  
+* &#x20;\*\*GitHub Webhooks\*\* for automatic pipeline triggers  
 
-Docker image pushed to AWS ECR
 
-Application running on EKS cluster
+
+Whenever code is pushed to GitHub, Jenkins automatically builds the Docker image, pushes it to Amazon ECR, and deploys it to the EKS cluster.
+
+
+
+
+
+###### **Architecture**
+
+
+
+GitHub → Webhook → Jenkins → Docker Build → Amazon ECR → Amazon EKS
+
+
+
+
+
+###### **Tech Stack**
+
+
+
+* Python (Flask)
+* Docker
+* Jenkins
+* AWS ECR (Elastic Container Registry)
+* AWS EKS (Elastic Kubernetes Service)
+* Kubernetes (kubectl)
+* Git \& GitHub
+
+
+
+
+
+###### **Key Features**
+
+
+
+* Fully automated CI/CD pipeline
+* Docker image build \& push to Amazon ECR
+* Kubernetes deployment on AWS EKS
+* GitHub webhook-based auto trigger
+* Scalable microservice deployment
+
+
+
+
+
+###### **Project Structure**
+
+
+
+**├── app.py**
+
+**├── requirements.txt**
+
+**├── Dockerfile**
+
+**├── Jenkinsfile**
+
+**├── k8s/**
+
+**│ ├── deployment.yaml**
+
+**│ └── service.yaml**
+
+
+
+
+
+###### **Screenshots** 
+
+* Jenkins pipeline success (all stages green)
+* ECR repository with pushed image
+* EKS cluster nodes \& pods
+
+
+
